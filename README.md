@@ -14,7 +14,7 @@ Make sure the tests still pass.
 
 # Release 1
 
-What do the Teacher and ApprenticeTeacher classes have in common? DRY it up.
+What do the SeniorTeacher and ApprenticeTeacher classes have in common? DRY it up.
 
 Make sure the tests still pass.
 
