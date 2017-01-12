@@ -9,10 +9,6 @@ class Student < BootcampAcademic
     @phase = 1
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
   def set_phase(num)
     if num == @phase
       response = "I'm doing phase #{@phase} again because I put my learning first. I'm gonna rock it!"
