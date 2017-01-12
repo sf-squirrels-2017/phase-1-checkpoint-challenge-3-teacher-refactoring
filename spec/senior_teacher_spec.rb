@@ -18,9 +18,9 @@ describe SeniorTeacher do
   end
 
   it "has a performance rating" do
-    expect{jan.performance_rating}.not_to raise_error
-    expect(jan).to receive(:performance_rating)
-    jan.performance_rating
+    expect{jan.perform_rating}.not_to raise_error
+    expect(jan).to receive(:perform_rating)
+    jan.perform_rating
   end
 
   describe "default behavior" do
