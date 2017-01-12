@@ -1,10 +1,10 @@
-module PeoplePowers
+module HighFivable
   def offer_high_five
     "High five!"
   end
 end
 
-module TeacherPowers
+module Teachable
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
@@ -21,7 +21,7 @@ module TeacherPowers
 end
 
 class People
-  include PeoplePowers
+  include HighFivable
 
   def initialize(options = {})
     @phase = phase
@@ -31,10 +31,26 @@ class People
 end
 
 class Teachers < People
-  include TeacherPowers
+  attr_reader :age, :salary, :target_raise, :target_rating
+  attr_accessor :name, :phase
+
+  include Teachable
 
   def initialize(options={})
     super
     @target_raise = target_raise
+    @target_rating = target_rating
+  end
+
+  def set_performance_rating(rating)
+    response = ""
+    if rating > @target_rating
+      response = "Yay, I'm a great employee!"
+      receive_raise(@target_raise)
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
   end
 end
