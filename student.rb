@@ -36,4 +36,6 @@ class Student < ApprenticeTeacher
   # def teach_stuff
   #   raise 'NoMethodError'
   # end
+
+  #  did not create correct error message when rspect test asks for nonexistant method
 end
