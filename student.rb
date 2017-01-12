@@ -30,4 +30,9 @@ class Student
     response += "Now I feel like a genius!"
     response
   end
+
+  def attend_training_session
+    puts "Whoa. I know ruby-fu"
+  end
+  
 end
