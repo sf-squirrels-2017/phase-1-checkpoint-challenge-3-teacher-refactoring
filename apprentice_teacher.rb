@@ -1,10 +1,14 @@
-class ApprenticeTeacher
+require_relative 'dbc-participant'
+
+class ApprenticeTeacher < DbcParticipant
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
+  # include DbcParticipant
+
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
     @target_raise = 800
     @phase = 3
   end
