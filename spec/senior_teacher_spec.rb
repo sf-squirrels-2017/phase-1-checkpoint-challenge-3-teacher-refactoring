@@ -1,4 +1,6 @@
 require_relative '../senior_teacher'
+require_relative '../teacher'
+require_relative '../ActionModule'
 
 describe SeniorTeacher do
   let(:jan) { SeniorTeacher.new({name: "Jan", age: 35}) }
