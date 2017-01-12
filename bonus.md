@@ -3,8 +3,10 @@
 Edit this file to answer the following questions. Give examples. You may need to do a bit of research. :)
 
 1. Why is Hash.fetch useful?
+- Because it's rich in features, for example fetch(key_name) which gives you the key value if it exists. fetch(key_name, default_value) which gives you a default value if key isn't inserted.
 
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
+- Because the chain of ancestors always follows a single path, where each module or class can only appear once. A solution can be to use a module instead.
 
 3. Why are these classes initialized with an options hash?
 
