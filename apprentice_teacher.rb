@@ -1,5 +1,12 @@
-class ApprenticeTeacher
-  attr_reader :age, :salary, :phase, :target_raise
+require_relative 'institutional_learning'
+require_relative 'salary'
+# require_relative 'teach'
+
+class ApprenticeTeacher < Salary 
+include Fives
+# include Teachable
+
+  attr_reader :age, :phase, :target_raise
   attr_accessor :name
 
   def initialize(options={})
@@ -7,10 +14,6 @@ class ApprenticeTeacher
     @name = options.fetch(:name, "")
     @target_raise = 800
     @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
@@ -24,11 +27,6 @@ class ApprenticeTeacher
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
   end
 
   def receive_raise(raise)
