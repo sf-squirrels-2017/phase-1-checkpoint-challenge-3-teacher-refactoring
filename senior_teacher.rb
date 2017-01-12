@@ -2,16 +2,18 @@ require_relative "teacher"
 
 class SeniorTeacher < Teacher
   
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader :performance_rating
 
   def initialize(options={})
     super
     @target_raise = 1000
-    @performance_rating = options.fetch(:performance_rating)
+    @rating_target = 90 
+    if options[:performance_rating]
+      @performance_rating = options[:performance_rating]
+    else
+      @performance_rating = 0
+    end
   end
-
-
 
   def teach_stuff
     response = ""
@@ -19,21 +21,6 @@ class SeniorTeacher < Teacher
     response += "*drops flat-out insane knowledge bomb* "
     response += "... You're welcome."
     response += " *saunters away*"
-    response
-  end
-
-
-
-
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 90
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
     response
   end
 
