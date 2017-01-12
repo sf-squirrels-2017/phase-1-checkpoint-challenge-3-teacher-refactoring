@@ -1,6 +1,7 @@
 require_relative 'teachable'
 require_relative 'raiseable'
 require_relative 'apprentice_teacher'
+require 'awesome_print'
 
 class SeniorTeacher < ApprenticeTeacher
   include Raiseable
@@ -31,4 +32,19 @@ class SeniorTeacher < ApprenticeTeacher
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
 
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works, fo SHO! "
+    response += "*drops flat-out insane knowledge bomb* "
+    response += "... You're welcome. *saunters away*"
+    response
+  end
+
 end
+
+
+jan = SeniorTeacher.new({name: "Jan", age: 35})
+
+ap what_is_this = jan.class
+
+ap "Jan's class is a #{what_is_this}"

@@ -1,5 +1,8 @@
 require_relative 'teachable'
 require_relative 'raiseable'
+require_relative 'rateable'
+require 'awesome_print'
+
 
 class ApprenticeTeacher
   include Raiseable
@@ -25,4 +28,20 @@ class ApprenticeTeacher
     end
     response
   end
+
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works. "
+    response += "*drops crazy knowledge bomb* "
+    response += "... You're welcome."
+    response
+  end
+
 end
+
+
+rey = ApprenticeTeacher.new({name: "Rey", age: 21})
+
+ap what_is_this = rey.class
+
+ap "Rey's class is a #{what_is_this}"
