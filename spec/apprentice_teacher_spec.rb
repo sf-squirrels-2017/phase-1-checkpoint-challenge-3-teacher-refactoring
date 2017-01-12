@@ -1,8 +1,11 @@
 require_relative '../apprentice_teacher'
+require_relative '../dbc-participant'
 
 describe ApprenticeTeacher do
-  let(:rey) { ApprenticeTeacher.new({name: "Rey", age: 21}) }
+  let(:rey) { ApprenticeTeacher.new }
   let(:default_apprentice) { ApprenticeTeacher.new }
+
+
 
   it "allows the name to change" do
     rey.name = "Rey"
@@ -17,14 +20,7 @@ describe ApprenticeTeacher do
     expect{rey.send(:performance_rating)}.to raise_error(NoMethodError)
   end
 
-  describe "default behavior" do
-    it "fills in '' for name" do
-      expect(default_apprentice.name).to eq('')
-    end
 
-    it "sets age to 0" do
-      expect(default_apprentice.age).to be(0)
-    end
 
     it "sets target raise to 800" do
       expect(default_apprentice.target_raise).to be(800)
@@ -87,4 +83,20 @@ describe ApprenticeTeacher do
       expect(response).to eq("Yay, I'm a great employee!")
     end
   end
+  context DbcParticipant do
+    let(:rey) { DbcParticipant.new({name: "Rey", age: 21}) }
+    let(:default_apprentice) { DbcParticipant.new }
+      describe "default behavior" do
+        it "fills in '' for name" do
+          expect(default_apprentice.name).to eq('')
+      end
+    end
+
+  context DbcParticipant do
+    let(:rey) { DbcParticipant.new({name: "Rey", age: 21}) }
+    let(:default_apprentice) { DbcParticipant.new }
+    it "sets age to 0" do
+      expect(default_apprentice.age).to be(0)
+      end
+    end
 end
