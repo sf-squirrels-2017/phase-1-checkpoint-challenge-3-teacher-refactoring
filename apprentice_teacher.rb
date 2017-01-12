@@ -1,21 +1,11 @@
-class ApprenticeTeacher
+require_relative 'senior_teacher'
+class ApprenticeTeacher < SeniorTeacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super (options)
     @target_raise = 800
-    @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
@@ -26,15 +16,7 @@ class ApprenticeTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
-
+# I think I need to move this behavior to a module, but not sure. 
   def set_performance_rating(rating)
     response = ""
     if rating > 80
@@ -47,7 +29,4 @@ class ApprenticeTeacher
     response
   end
 
-  def attend_training_session
-    puts "Whoa. I know ruby-fu"
-  end
 end
