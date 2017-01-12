@@ -1,11 +1,12 @@
-class Student
+class Student 
+  ## I know that this should be a compositional relationship, but am not sure how to implement it. I need a module and don't have time for it.
+
   attr_reader :age, :phase
   attr_accessor :name
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
   def offer_high_five
