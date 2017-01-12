@@ -10,6 +10,7 @@ module Teachable
 
 
 # I want to self.class and then do some control flow to edit the output
+# 
   # def teach_stuff
   #   if self.class = ApprenticeTeacher
   #     response = ""
