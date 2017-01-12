@@ -2,7 +2,7 @@ require_relative 'action_for_teachers'
 require_relative 'teacher'
 
 class SeniorTeacher < Teacher
-  include Shouts
+  include Shout
   include Salary
   include Teacher_Phase
 

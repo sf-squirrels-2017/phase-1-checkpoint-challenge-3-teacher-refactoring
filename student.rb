@@ -1,7 +1,7 @@
 require_relative 'action_for_teachers'
 
 class Student
-  include Shouts
+  include Shout
 
   attr_reader :age, :phase
   attr_accessor :name

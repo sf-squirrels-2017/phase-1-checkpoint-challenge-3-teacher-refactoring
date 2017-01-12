@@ -1,4 +1,4 @@
-module Shouts
+module Shout
   def offer_high_five
     "High five!"
   end

@@ -1,5 +1,4 @@
 class Teacher
-
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -8,5 +7,4 @@ class Teacher
     @name = options.fetch(:name, "")
     @phase = 3
   end
-
 end
