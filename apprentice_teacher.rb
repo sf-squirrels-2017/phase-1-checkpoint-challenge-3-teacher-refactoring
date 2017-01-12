@@ -1,4 +1,6 @@
-class ApprenticeTeacher
+require_relative 'student'
+
+class ApprenticeTeacher < Student
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -7,11 +9,9 @@ class ApprenticeTeacher
     @name = options.fetch(:name, "")
     @target_raise = 800
     @phase = 3
+    @rating_requirment = 80
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     @phase = num
@@ -37,7 +37,7 @@ class ApprenticeTeacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > @rating_requirment
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
@@ -51,3 +51,4 @@ class ApprenticeTeacher
     puts "Whoa. I know ruby-fu"
   end
 end
+

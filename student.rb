@@ -31,3 +31,6 @@ class Student
     response
   end
 end
+
+amir = Student.new({name: "Amir Fayek", age: 21})
+
