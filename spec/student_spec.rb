@@ -1,4 +1,6 @@
 require_relative '../student'
+require_relative '../teacher'
+require_relative '../ActionModule'
 
 describe Student do
   let(:amir) { Student.new({name: "Amir Fayek", age: 21}) }
