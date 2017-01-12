@@ -1,4 +1,9 @@
+require_relative 'high_fiveable'
+
 class ApprenticeTeacher
+
+  include HighFiveable
+
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -9,9 +14,9 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
   def set_phase(num)
     @phase = num
