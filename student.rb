@@ -1,11 +1,12 @@
-class Student
+require_relative 'bootcamp_academic'
+
+class Student < BootcampAcademic
   attr_reader :age, :phase
   attr_accessor :name
 
-  def initialize(options = {})
+  def initialize(options={})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
   def offer_high_five
