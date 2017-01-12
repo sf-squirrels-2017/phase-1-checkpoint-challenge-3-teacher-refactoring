@@ -15,12 +15,12 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  Use module teachable
+  # === >> Use module teachable
   # def offer_high_five
   #   "High five!"
   # end
 
-  Use module teachable
+  # === >> Use module teachable
   # def set_phase(num)
   #   response = ""
   #   if num == @phase
@@ -33,7 +33,7 @@ class Student
   #   response
   # end
 
-  Use module trainable
+  # === >> Use module trainable
   # def learn_stuff
   #   response = ""
   #   response += "WHOA! I've never thought of it quite like that before. "

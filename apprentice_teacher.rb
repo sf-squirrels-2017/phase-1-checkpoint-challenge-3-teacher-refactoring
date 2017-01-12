@@ -7,9 +7,9 @@ class ApprenticeTeacher < Teacher
   include rateable
   include trainable
 
-
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  # inherit from Teacher class
+  # attr_reader :age, :salary, :phase, :target_raise
+  # attr_accessor :name
 
   def initialize(options={})
     super
@@ -19,7 +19,7 @@ class ApprenticeTeacher < Teacher
     # @phase = 3
   end
 
-  Use module teachable
+  # === >> Use module teachable
   # def offer_high_five
   #   "High five!"
   # end
@@ -39,7 +39,7 @@ class ApprenticeTeacher < Teacher
 
 
 
-  Use module rateable
+  # === >> Use module rateable
 
   # def salary=(new_salary)
   #   puts "This better be good!"
@@ -62,7 +62,7 @@ class ApprenticeTeacher < Teacher
   #   response
   # end
 
-  Use module trainable
+  # === >> Use module trainable
   # def attend_training_session
   #   puts "Whoa. I know ruby-fu"
   # end

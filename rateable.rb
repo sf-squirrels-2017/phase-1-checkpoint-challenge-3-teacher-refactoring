@@ -20,8 +20,4 @@ module rateble
     end
     response
   end
-
-
-
-
 end

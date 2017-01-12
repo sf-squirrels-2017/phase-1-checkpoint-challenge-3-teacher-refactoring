@@ -7,8 +7,8 @@ class SeniorTeacher < Teacher
   include rateable
   include trainable
 
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  # attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  # attr_accessor :name
 
   def initialize(options={})
     super
@@ -18,7 +18,7 @@ class SeniorTeacher < Teacher
     # @target_raise = 1000
   end
 
-  Use module teachable
+  # === >> Use module teachable
   # def offer_high_five
   #   "High five!"
   # end
@@ -36,7 +36,7 @@ class SeniorTeacher < Teacher
   #   response
   # end
 
-  Use module ratable
+  # === >> Use module ratable
   # def salary=(new_salary)
   #   puts "This better be good!"
   #   @salary = new_salary
@@ -58,7 +58,7 @@ class SeniorTeacher < Teacher
   #   response
   # end
 
-  Use module trainable
+  # === >> Use module trainable
   # def lead_training_session
   #   puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   # end
