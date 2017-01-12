@@ -9,10 +9,6 @@ class SeniorTeacher < Educator
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "

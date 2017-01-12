@@ -9,10 +9,6 @@ class ApprenticeTeacher < Educator
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "

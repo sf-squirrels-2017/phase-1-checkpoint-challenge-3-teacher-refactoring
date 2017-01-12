@@ -1,5 +1,6 @@
+require_relative 'high_five.rb'
 class Educator
-
+  include High_five
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
