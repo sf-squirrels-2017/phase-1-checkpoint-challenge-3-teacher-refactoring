@@ -1,5 +1,7 @@
 require_relative 'educator.rb'
+
 class ApprenticeTeacher < Educator
+
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
