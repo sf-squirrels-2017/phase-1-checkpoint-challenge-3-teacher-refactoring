@@ -1,11 +1,15 @@
 require_relative 'people'
+require_relative 'dbc_people'
 
-class Student < People
+class Student
   attr_reader :phase
+  attr_accessor :name
+  include People
+
 
   def initialize(options = {})
-    super
     @phase = 1
+    @name = options.fetch(:name, "")
   end
 
   def set_phase(num)

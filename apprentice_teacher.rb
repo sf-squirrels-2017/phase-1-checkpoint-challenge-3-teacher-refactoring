@@ -1,11 +1,15 @@
 require_relative 'people'
+require_relative 'dbc_people'
 
-class ApprenticeTeacher < People
+class ApprenticeTeacher < Teachers
   attr_reader :target_raise
+  include People
+
 
   def initialize(options={})
   	super
     @target_raise = 800
+    @max_rating=80
   end
 
   def teach_stuff
@@ -13,22 +17,6 @@ class ApprenticeTeacher < People
     response += "Listen, class, this is how everything works. "
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
-    response
-  end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
-
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
     response
   end
 
