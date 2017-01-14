@@ -1,15 +1,15 @@
+require_relative 'people'
+require_relative 'dbc_people'
+
 class Student
-  attr_reader :age, :phase
+  attr_reader :phase
   attr_accessor :name
+  include People
+
 
   def initialize(options = {})
     @phase = 1
-    @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
