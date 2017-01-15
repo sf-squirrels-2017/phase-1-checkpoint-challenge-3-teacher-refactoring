@@ -17,7 +17,7 @@ class Teacher < Person
 
   def set_performance_rating(rating)
     @response = ""
-    if rating > @rating_requred
+    if rating > @rating_required
       @response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else

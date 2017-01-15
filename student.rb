@@ -28,3 +28,6 @@ class Student < Person
     response
   end
 end
+
+amir = Student.new({name: "Amir Fayek", age: 21})
+

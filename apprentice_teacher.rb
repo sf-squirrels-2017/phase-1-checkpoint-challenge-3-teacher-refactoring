@@ -10,7 +10,6 @@ class ApprenticeTeacher < Teacher
     @target_raise = 800
     @phase = 3
   end
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
@@ -20,7 +19,7 @@ class ApprenticeTeacher < Teacher
   end
 
   def set_performance_rating(rating)
-    @rating_requred = 80
+    @rating_required = 80
     super
   end
 
@@ -28,3 +27,4 @@ class ApprenticeTeacher < Teacher
     puts "Whoa. I know ruby-fu"
   end
 end
+

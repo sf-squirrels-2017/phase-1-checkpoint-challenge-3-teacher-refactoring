@@ -1,3 +1,4 @@
+
 require_relative 'teacher'
 class SeniorTeacher < Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
@@ -10,7 +11,6 @@ class SeniorTeacher < Teacher
     @target_raise = 1000
   end
 
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
@@ -20,7 +20,7 @@ class SeniorTeacher < Teacher
   end
 
   def set_performance_rating(rating)
-    @rating_requred = 90
+    @rating_required = 90
     super
   end
 
