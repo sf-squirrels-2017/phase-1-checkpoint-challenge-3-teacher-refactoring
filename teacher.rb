@@ -13,8 +13,7 @@ class Teacher < Person
 	end
 
 	def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
+    response = "Listen, class, this is how everything works. "
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
