@@ -16,6 +16,18 @@ module Teacher_stuff
       @salary += raise
     end
 
+    def set_performance_rating(rating)
+    response = ""
+    if rating > @performance_rate
+      response = "Yay, I'm a great employee!"
+      receive_raise(@target_raise)
+    else
+      response += "Oh, well -- thanks to this actionable, specific, and kind "
+      response += "feedback, I'll do better next time."
+    end
+    response
+    end
+
   end
 
   module Offer_high_five
