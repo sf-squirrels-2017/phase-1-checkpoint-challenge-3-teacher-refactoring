@@ -1,15 +1,13 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative "person"
+require_relative "modules"
+
+
+class Student < Person
+  include Offer_high_five
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
@@ -30,4 +28,5 @@ class Student
     response += "Now I feel like a genius!"
     response
   end
+
 end
