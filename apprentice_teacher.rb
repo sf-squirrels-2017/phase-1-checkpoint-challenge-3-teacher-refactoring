@@ -1,17 +1,17 @@
+require_relative "person"
 require_relative "modules"
 
-class ApprenticeTeacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+class ApprenticeTeacher < Person
+  attr_reader :salary, :phase, :target_raise
+  # attr_accessor :name
 
   include Teacher_stuff
   include Offer_high_five
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 800
+    super
     @phase = 3
+    @target_raise = 800
   end
 
   def teach_stuff

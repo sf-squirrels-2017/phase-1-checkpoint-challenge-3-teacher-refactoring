@@ -1,15 +1,14 @@
+require_relative "person"
 require_relative "modules"
 
-class SeniorTeacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+class SeniorTeacher < Person
+  attr_reader :salary, :phase, :performance_rating, :target_raise
   include Teacher_stuff
   include Offer_high_five
 
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 

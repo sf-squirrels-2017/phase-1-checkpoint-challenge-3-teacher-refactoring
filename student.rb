@@ -1,17 +1,17 @@
+require_relative "person"
 require_relative "modules"
 
 
-class Student 
-  attr_reader :age, :phase
-  attr_accessor :name
+class Student < Person
+  # attr_reader :age, :phase
+  # attr_accessor :name
   include Offer_high_five
 
   def initialize(options = {})
-  
+    super
     @phase = 1
-
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
   end
 
 
